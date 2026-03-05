@@ -40,3 +40,7 @@ jobs:
       - name: Push Docker Image
         run: |
            docker push sanketkadam09/flask-cicd-demo         
+
+      - name: Deploy Container
+        run: |
+          docker run -d -p 5000:5000 sanketkadam09/flask-cicd-demo     
